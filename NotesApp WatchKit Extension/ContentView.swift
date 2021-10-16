@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var notes = Note(title: "One note", creationDate: "14/05/2021")
+    
     var body: some View {
-        Text("Hello, World!")
+        Text("\(notes.title) - \(notes.creationDate)")
             .padding()
             .foregroundColor(Color.black)
             .background(Color.white)
+            
     }
 }
 
