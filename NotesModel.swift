@@ -7,9 +7,21 @@
 
 import SwiftUI
 
-struct Note{
-    
+struct Note: Identifiable{
+    var id: UUID
     var title: String
     var creationDate: String
+    
+    init(title: String){
+        self.id = UUID()
+        self.title = title
+        
+        let date = Date()
+        let formatDate = DateFormatter()
+        formatDate.dateStyle = .long
+        formatDate.timeStyle = .medium
+        
+        self.creationDate = formatDate.string(from: date)
+    }
     
 }
