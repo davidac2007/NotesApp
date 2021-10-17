@@ -14,10 +14,16 @@ struct ListNotes: View {
                           Note(title: "3")]
     
     var body: some View {
+        
+        
         List{
             ForEach(0..<notes.count, id: \.self ){ i in
-                Text("\(notes[i].title) - \(notes[i].creationDate)")
-                    .lineLimit(1)
+                NavigationLink(
+                    destination: NoteDetails(note: notes[i]),
+                    label: {
+                   Text( notes[i].title)
+                        .lineLimit(1)
+                })
             }
         }
     }
