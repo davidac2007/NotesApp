@@ -12,15 +12,18 @@ struct AddNoteView: View {
     @State private var notes = [Note]()
     @State private var text: String = ""
     var body: some View {
-        TextField("nota", text: $text)
-        Button("Add note"){
-            guard !text.isEmpty else{
-                return
+        VStack(spacing: 10.0){
+            TextField("nota", text: $text)
+            Button("Add note"){
+                guard !text.isEmpty else{
+                    return
+                }
+                let note = Note(title: text)
+                notes.append(note)
+                text = ""
             }
-            let note = Note(title: text, creationDate: "26/12/02")
-            notes.append(note)
-            text = ""
         }
+        
     }
 }
 
