@@ -13,30 +13,35 @@ struct ListNotes: View {
     
     var body: some View {
         
-        
-        List{
-            ForEach(0..<notes.count, id: \.self ){ i in
-                NavigationLink(
-                    destination: NoteDetails(note: notes[i]),
-                    label: {
-                        Text( notes[i].title)
-                            .lineLimit(1)
-                    })
-            }.onDelete(perform: delete)
-                
-              
-        }.background(Color.blue)
+        VStack{
             
-        
-        
-
+            Text("Notes \(notes.count)")
+            
+            List{
+                ForEach(0..<notes.count, id: \.self ){ i in
+                    NavigationLink(
+                        destination: NoteDetails(note: notes[i]),
+                        label: {
+                            Text( notes[i].title)
+                                .lineLimit(1)
+                        })
+                }.onDelete(perform: delete)
+            }
+            
+        }   .onAppear(perform: {
+            notes = Tools.shared.loadNote()
+        })
     }
+    
+    
+    
     func delete(offsets: IndexSet){
         withAnimation {
             notes.remove(atOffsets: offsets)
         }
-        
+        Tools.shared.saveNote(notes: notes)
     }
+    
 }
 
 struct ListNotes_Previews: PreviewProvider {
