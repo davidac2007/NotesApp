@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0051D1271D03830096A890 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0051D0271D03830096A890 /* Tools.swift */; };
 		5B368E50271B53C300CE92E7 /* NotesApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5B368E4F271B53C300CE92E7 /* NotesApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5B368E55271B53C400CE92E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B368E54271B53C400CE92E7 /* Assets.xcassets */; };
 		5B368E5B271B53C400CE92E7 /* NotesApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B368E5A271B53C400CE92E7 /* NotesApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -64,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B0051D0271D03830096A890 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		5B368E4B271B53C300CE92E7 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B368E4F271B53C300CE92E7 /* NotesApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NotesApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B368E54271B53C400CE92E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		5B368E44271B53C300CE92E7 = {
 			isa = PBXGroup;
 			children = (
+				5B0051D0271D03830096A890 /* Tools.swift */,
 				5B6B81B4271CD3430043C3BB /* NoteDetails.swift */,
 				5B6D767A271BE8B5009B1A50 /* ListNotes.swift */,
 				5B368E7A271B73FB00CE92E7 /* AddNoteView.swift */,
@@ -277,6 +280,7 @@
 				5B368E64271B53C400CE92E7 /* ComplicationController.swift in Sources */,
 				5B368E7B271B73FB00CE92E7 /* AddNoteView.swift in Sources */,
 				5B6D767B271BE8B5009B1A50 /* ListNotes.swift in Sources */,
+				5B0051D1271D03830096A890 /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

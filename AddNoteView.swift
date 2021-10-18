@@ -20,6 +20,7 @@ struct AddNoteView: View {
                 }
                 let note = Note(title: text)
                 notes.append(note)
+                Tools.shared.saveNote(notes: notes)
                 text = ""
             }
         }
